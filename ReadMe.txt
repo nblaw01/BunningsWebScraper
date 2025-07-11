@@ -66,7 +66,6 @@ Bunnings WebScraper/
 KNOWN ISSUES
 ------------
 - Dynamic site elements may sometimes fail to load.
-- If the site blocks automation, reduce run frequency or try a different user agent.
 
 AUTHOR
 ------
