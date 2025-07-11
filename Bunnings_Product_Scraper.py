@@ -35,7 +35,7 @@ chrome_options.add_argument("--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X
 
 # Initialise the Chrome WebDriver
 driver = webdriver.Chrome(options=chrome_options)
-wait = WebDriverWait(driver, 10) # Explicit wait object
+wait = WebDriverWait(driver, 10) # Explicitly wait for 10 seconds
 
 # Open Bunnings website
 driver.get("https://www.bunnings.com.au/")
@@ -87,7 +87,7 @@ for query in search_terms:
         search_box.send_keys(Keys.RETURN)
         print(f"Searching for: {query}")
 
-        # Wait for product titles to appear on page
+        # Wait for 10 seconds for product titles to appear on page
         wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-locator^="search-product-tile-title"]')))
         # Wait an additional 2 seconds to allow the rest of the dynamic content to fully render
         time.sleep(2)
@@ -122,9 +122,9 @@ for query in search_terms:
     except Exception as e:
         print("Could not search:", e)
 
-# -------------------------------
+# ---------------------------------
 # SAVE SCRAPED DATA TO CSV
-# -------------------------------
+# ---------------------------------
 
 file_exists = os.path.isfile("bunnings_scrape.csv")
 
