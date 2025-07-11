@@ -1,0 +1,8 @@
+# Exclude Python cache and venv
+__pycache__/
+*.pyc
+selenium-env/
+
+# Exclude runtime state
+run_count.txt
+bunnings_scrape.csv
